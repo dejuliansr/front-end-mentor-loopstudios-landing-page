@@ -480,19 +480,6 @@ footer {
     z-index: 2;
   }
 
-  /* .burger-menu {
-    display: flex;
-  } */
-
-  /* .header-nav {
-    display: flex;
-    justify-content: space-between;
-  } */
-
-  /* .menu-icon {
-    display: block;
-  } */
-
   nav ul {
     height: 100%;
     display: flex;
@@ -571,5 +558,15 @@ footer {
 
   .footer-copyright {
     font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 568px) {
+  .hero-content {
+    padding: 0 1rem;
+  }
+
+  .hero-content h2 {
+    font-size: 35px;
   }
 }
