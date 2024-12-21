@@ -20,3 +20,17 @@ closeIcon.addEventListener('click', () => {
   overlay.style.display = 'none'
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const slideDownElements = document.querySelectorAll('.slide-down');
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // Berhenti mengamati setelah animasi
+      }
+    });
+  }, { threshold: 0.5 }); // elemen dianggap terlihat jika 10% dari ukurannya terlihat
+
+  slideDownElements.forEach(element => observer.observe(element));
+});
